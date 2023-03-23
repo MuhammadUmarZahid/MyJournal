@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.bbx.myjournal.DatabaseConstants.EMOTION_TABLE
+import com.bbx.myjournal.data.Emotion
 import kotlinx.coroutines.flow.Flow
 
 

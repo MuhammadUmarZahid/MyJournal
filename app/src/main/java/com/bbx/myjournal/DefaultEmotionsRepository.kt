@@ -1,5 +1,6 @@
 package com.bbx.myjournal
 
+import com.bbx.myjournal.data.Emotion
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import java.util.*

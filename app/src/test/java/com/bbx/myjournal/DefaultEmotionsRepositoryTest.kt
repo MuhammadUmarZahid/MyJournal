@@ -1,6 +1,7 @@
 package com.bbx.myjournal
 
 import app.cash.turbine.test
+import com.bbx.myjournal.data.Emotion
 import io.mockk.*
 import junit.framework.Assert.assertTrue
 import kotlinx.coroutines.*

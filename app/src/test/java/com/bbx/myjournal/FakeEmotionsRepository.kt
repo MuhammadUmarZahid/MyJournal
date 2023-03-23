@@ -1,5 +1,6 @@
 package com.bbx.myjournal
 
+import com.bbx.myjournal.data.Emotion
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -33,8 +34,10 @@ class FakeEmotionsRepository:EmotionsRepository {
     override fun getEmotionsGroupedByMonthDay(): Flow<List<EmotionDataByMonthModel>> {
         return flow<List<EmotionDataByMonthModel>> {
             val list = arrayListOf<Emotion>()
-            list.add(Emotion(2,1,"testing", created_at = Date(1558764780000),
-            time="11:13"))
+            list.add(
+                Emotion(2,1,"testing", created_at = Date(1558764780000),
+            time="11:13")
+            )
             val daylist = arrayListOf<EmotionDataByDayModel>()
             daylist.add(EmotionDataByDayModel(23,2, emotions = list, date = "Thu, 23"))
             val monthlist = arrayListOf<EmotionDataByMonthModel>()
