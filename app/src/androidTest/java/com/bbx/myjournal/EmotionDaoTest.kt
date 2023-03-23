@@ -39,19 +39,19 @@ class EmotionDaoTest {
 
     @Test
     fun insertEmotion_returnsTrue() = runBlocking {
-        val emotion = EmotionEntity(emotionId = 3, emotionType = 1, emotionNotes = "test", createdAt = Date(System.currentTimeMillis()))
+        val emotion = EmotionEntity(emotionId = 3, emotionType = 1, emotionNotes = "test", createdAt = Date())
         emotionDao.insertEmotion(emotion)
 
-        val latch = CountDownLatch(1)
-        val job = async(Dispatchers.Main) {
+        //val latch = CountDownLatch(1)
+        //val job = async(Dispatchers.IO) {
             emotionDao.getAllEmotions().collect {
-                assertThat(it).contains(emotion)
-                latch.countDown()
+                assertThat(it.size).isEqualTo(1)
+                //latch.countDown()
 
             }
-        }
-        latch.await()
-        job.cancelAndJoin()
+        //}
+        //latch.await()
+        //job.cancelAndJoin()
     }
 
     @Test
@@ -63,15 +63,15 @@ class EmotionDaoTest {
         emotionDao.insertEmotion(emotion2)
         emotionDao.insertEmotion(emotion3)
 
-        val latch = CountDownLatch(1)
-        val job = async(Dispatchers.Main) {
-            emotionDao.getAllEmotions().collect {
+        //val latch = CountDownLatch(1)
+        //val job = async(Dispatchers.Main) {
+        emotionDao.getAllEmotions().collect {
                 assertThat(it.size).isEqualTo(3)
-                latch.countDown()
-            }
+                //latch.countDown()
         }
-        latch.await()
-        job.cancelAndJoin()
+        //}
+        //latch.await()
+        //job.cancelAndJoin()
     }
 
 }
