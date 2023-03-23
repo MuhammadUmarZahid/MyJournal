@@ -52,12 +52,14 @@ class CreateEmotionActivity : AppCompatActivity() {
         }
 
         createBtn.setOnClickListener {
+            if(notesInput.text.toString().isNotBlank()) {
                 emotionType?.let { it1 ->
                     createEMotionViewModel.onCreateEmotion(
                         notesInput.text.toString(),
                         it1
                     )
                 }
+            }
         }
     }
 }

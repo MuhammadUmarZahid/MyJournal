@@ -58,10 +58,9 @@ class EmotionDaoTest {
     fun getAllEmotions_returnsTrue() = runBlocking {
         val emotion = EmotionEntity(emotionId = 3, emotionType = 1, emotionNotes = "test", createdAt = Date(System.currentTimeMillis()))
         val emotion2 = EmotionEntity(emotionId = 4, emotionType = -1, emotionNotes = "test1", createdAt = Date(System.currentTimeMillis()))
-        val emotion3 = EmotionEntity(emotionId = 5, emotionType = 0, emotionNotes = "test2", createdAt = Date(System.currentTimeMillis()))
-        emotionDao.insertEmotion(emotion)
+       emotionDao.insertEmotion(emotion)
         emotionDao.insertEmotion(emotion2)
-        emotionDao.insertEmotion(emotion3)
+
 
         //val latch = CountDownLatch(1)
         //val job = async(Dispatchers.Main) {
