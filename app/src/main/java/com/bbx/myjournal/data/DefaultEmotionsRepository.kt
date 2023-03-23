@@ -1,12 +1,14 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.data
 
-import com.bbx.myjournal.data.Emotion
+import com.bbx.myjournal.data.local.EmotionDao
+import com.bbx.myjournal.utils.DateTimeConverters
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import java.util.*
 import javax.inject.Inject
 
-class DefaultEmotionsRepository @Inject constructor(private val emotionDao: EmotionDao,private val dateTimeConverters: DateTimeConverters):EmotionsRepository {
+class DefaultEmotionsRepository @Inject constructor(private val emotionDao: EmotionDao, private val dateTimeConverters: DateTimeConverters):
+    EmotionsRepository {
 
     override suspend fun createEmotion(notes:String, emotionType:Int) {
         val date = Date(System.currentTimeMillis())

@@ -1,8 +1,7 @@
 package com.bbx.myjournal
 
-import kotlinx.coroutines.runBlocking
+import com.bbx.myjournal.utils.Converters
 import kotlinx.coroutines.test.runTest
-import org.hamcrest.MatcherAssert
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.core.IsEqual
 import org.junit.Before

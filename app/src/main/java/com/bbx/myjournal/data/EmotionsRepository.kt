@@ -1,4 +1,4 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.data
 
 import kotlinx.coroutines.flow.Flow
 

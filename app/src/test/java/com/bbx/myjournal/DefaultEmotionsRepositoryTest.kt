@@ -1,16 +1,16 @@
 package com.bbx.myjournal
 
 import app.cash.turbine.test
-import com.bbx.myjournal.data.Emotion
+import com.bbx.myjournal.data.*
+import com.bbx.myjournal.data.local.EmotionDao
+import com.bbx.myjournal.utils.DateTimeConverters
 import io.mockk.*
-import junit.framework.Assert.assertTrue
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.*
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.core.IsEqual.equalTo
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -25,7 +25,7 @@ class DefaultEmotionsRepositoryTest {
 
     //mocked dependency
 
-    private lateinit var emotionDao:EmotionDao
+    private lateinit var emotionDao: EmotionDao
     private lateinit var dateTimeConverters: DateTimeConverters
 
 

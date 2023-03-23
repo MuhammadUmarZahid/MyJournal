@@ -1,7 +1,8 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.createemotion
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.bbx.myjournal.data.EmotionsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch

@@ -1,10 +1,10 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.di
 
 import android.content.Context
 import androidx.room.Room
-import androidx.room.TypeConverter
-import androidx.room.TypeConverters
-import com.bbx.myjournal.DatabaseConstants.JOURNAL_DATABASE
+import com.bbx.myjournal.data.local.DatabaseConstants.JOURNAL_DATABASE
+import com.bbx.myjournal.data.local.EmotionDao
+import com.bbx.myjournal.data.local.AppDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

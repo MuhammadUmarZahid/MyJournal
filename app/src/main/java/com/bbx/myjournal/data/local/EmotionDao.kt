@@ -1,11 +1,14 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.data.local
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.bbx.myjournal.DatabaseConstants.EMOTION_TABLE
+import com.bbx.myjournal.data.local.DatabaseConstants.EMOTION_TABLE
 import com.bbx.myjournal.data.Emotion
+import com.bbx.myjournal.data.EmotionDataByDayEntity
+import com.bbx.myjournal.data.EmotionDataByMonthEntity
+import com.bbx.myjournal.data.EmotionEntity
 import kotlinx.coroutines.flow.Flow
 
 

@@ -1,4 +1,4 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.data
 
 class EmotionDataByDayEntity (
     var day:Int = 0,

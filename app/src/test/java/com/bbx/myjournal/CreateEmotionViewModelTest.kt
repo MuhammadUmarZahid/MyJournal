@@ -1,12 +1,8 @@
 package com.bbx.myjournal
 
 import app.cash.turbine.test
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.test.UnconfinedTestDispatcher
-import kotlinx.coroutines.test.advanceUntilIdle
+import com.bbx.myjournal.createemotion.CreateEmotionViewModel
 import kotlinx.coroutines.test.runTest
-import org.hamcrest.core.IsEqual.equalTo
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule

@@ -1,4 +1,4 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.data
 
 data class EmotionDataByMonthEntity(
     var month: String? = null,

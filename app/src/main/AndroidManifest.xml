@@ -15,10 +15,10 @@
         android:theme="@style/Theme.MyJournal"
         tools:targetApi="31">
         <activity
-            android:name=".CreateEmotionActivity"
+            android:name=".createemotion.CreateEmotionActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".emotions.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

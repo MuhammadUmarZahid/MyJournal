@@ -1,10 +1,9 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.TypeConverters
-import com.bbx.myjournal.DatabaseConstants.EMOTION_TABLE
+import com.bbx.myjournal.data.local.DatabaseConstants.EMOTION_TABLE
 import java.util.*
 
 

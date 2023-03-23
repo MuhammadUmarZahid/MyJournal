@@ -1,6 +1,7 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.utils
 
 import androidx.room.TypeConverter
+import com.bbx.myjournal.Constants
 import java.lang.Exception
 import java.text.DateFormat
 import java.text.SimpleDateFormat

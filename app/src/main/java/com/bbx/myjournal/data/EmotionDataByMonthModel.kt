@@ -1,4 +1,6 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.data
+
+import com.bbx.myjournal.data.EmotionDataByDayModel
 
 data class EmotionDataByMonthModel(
     var month: String? = null,

@@ -1,4 +1,4 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.emotions
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,14 +7,18 @@ import androidx.lifecycle.*
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bbx.myjournal.*
+import com.bbx.myjournal.createemotion.CreateEmotionActivity
+import com.bbx.myjournal.emotions.adapters.DayViewAdapter
+import com.bbx.myjournal.emotions.adapters.EmotionViewAdapter
+import com.bbx.myjournal.emotions.adapters.MonthViewAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    private lateinit var mainViewModel:MainViewModel
+    private lateinit var mainViewModel: MainViewModel
     lateinit var concatAdapter:ConcatAdapter
     lateinit var adapterList:ArrayList<RecyclerView.Adapter<RecyclerView.ViewHolder>>
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val createFab = findViewById<FloatingActionButton>(R.id.create)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         createFab.setOnClickListener {
-            val i = Intent (this,CreateEmotionActivity::class.java)
+            val i = Intent (this, CreateEmotionActivity::class.java)
             startActivity(i)
         }
 

@@ -1,4 +1,4 @@
-package com.bbx.myjournal
+package com.bbx.myjournal.emotions.adapters
 
 import android.content.Context
 import android.graphics.Color
@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bbx.myjournal.R
+import com.bbx.myjournal.data.EmotionDataByMonthModel
 
-class MonthViewAdapter (context: Context, list:EmotionDataByMonthModel) :
+class MonthViewAdapter (context: Context, list: EmotionDataByMonthModel) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 

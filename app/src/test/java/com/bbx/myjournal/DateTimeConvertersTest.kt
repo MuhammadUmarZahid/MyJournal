@@ -1,5 +1,6 @@
 package com.bbx.myjournal
 
+import com.bbx.myjournal.utils.DateTimeConverters
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.*
 import org.junit.Before
